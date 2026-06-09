@@ -1207,7 +1207,7 @@ function renderFAQ() {
   const q = document.getElementById("searchInput").value.toLowerCase().trim();
   const grid = document.getElementById("faqGrid");
   let items = FAQ_ITEMS.filter(item => {
-    if (q) return item.question.toLowerCase().includes(q) || item.answer.toLowerCase().includes(q);
+    if (q) return item.question.toLowerCase().includes(q);
     if (selectedCategory === "All") return FEATURED.has(item.question);
     return item.category === selectedCategory;
   });
